@@ -64,4 +64,8 @@ def correct_spelling(x, choices):
 allowedcountries = ['United States','Canada']
 #unique_countries = df["Country"].unique()
 df["Country"] = df["Country"].apply(lambda x:correct_spelling(x,allowedcountries) )
-print(df["Country"])
+
+df.to_csv("cleaned_superstore.csv", index = False)
+print(df)
+
+
